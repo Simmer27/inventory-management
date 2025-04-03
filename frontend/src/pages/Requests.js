@@ -29,7 +29,7 @@ const Requests = () => {
     const handleDelete = async (id) => {
         const confirmDelete = window.confirm("Are you sure you want to delete this request?");
         if (confirmDelete) {
-            const response = await fetch(`/api/requests/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/requests/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${user.token}`,
